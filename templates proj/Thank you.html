@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thank you</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat:700' rel='stylesheet' type='text/css'>
+  <style>
+		@import url(//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css);
+		@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+		.submit {
+      cursor: pointer;
+        text-decoration: none;
+        border-radius: 5em;
+        color: #fff;
+        background: linear-gradient(to right, #9C27B0, #E040FB);
+        border: none;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        font-family: 'Ubuntu', sans-serif;
+        margin-top: 10px;
+        font-size: 15px;
+        outline: none;
+    }
+    .submit:hover{
+            color: white;
+            background: linear-gradient(to right, #9C27B0, #E040FB);
+            border-radius: 20px;
+            box-shadow: 2px 6px 20px grey;
+        }
+
+	</style>
+  <link rel="stylesheet" href="https://2-22-4-dot-lead-pages.appspot.com/static/lp918/min/default_thank_you.css">
+  <script src="https://2-22-4-dot-lead-pages.appspot.com/static/lp918/min/jquery-1.9.1.min.js"></script>
+  <script src="https://2-22-4-dot-lead-pages.appspot.com/static/lp918/min/html5shiv.js"></script>
+
+  <link rel="icon" type="image/png"
+        href="https://southeastasia1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpeg&cs=fFNQTw&docid=https%3A%2F%2Fviteduin59337-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!-TkH7zP3u0qzVB9cQZpab9xSy5HTcYNGiPVAzVGJB7lAhPiWukEhTIP3NrJ--oMG%2Fitems%2F01TUWEME2CWUI2Q4OB6VC37TBHUAD5RVQT%3Fversion%3DPublished&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvdml0ZWR1aW41OTMzNy1teS5zaGFyZXBvaW50LmNvbUBjN2IwMGQ3Zi1hZDk5LTQ0MmEtYjEyZi1jMmM5MTIwNDRmZGMiLCJpc3MiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAiLCJuYmYiOiIxNjE4NDc3MjAwIiwiZXhwIjoiMTYxODQ5ODgwMCIsImVuZHBvaW50dXJsIjoiWWtyTEl2Zzg0bTlyVXhmazJSaE5MUC9aQVUzQURaNGNFZGtLRjEyT0dCUT0iLCJlbmRwb2ludHVybExlbmd0aCI6IjEyMyIsImlzbG9vcGJhY2siOiJUcnVlIiwidmVyIjoiaGFzaGVkcHJvb2Z0b2tlbiIsInNpdGVpZCI6IlpXWXdOek01WmprdFpqY3pNeTAwWVdKaUxXSXpOVFF0TVdZMVl6UXhPV0UxWVRabSIsInNpZ25pbl9zdGF0ZSI6IltcImttc2lcIl0iLCJuYW1laWQiOiIwIy5mfG1lbWJlcnNoaXB8eWFzaC5mYWxrZUB2aXQuZWR1LmluIiwibmlpIjoibWljcm9zb2Z0LnNoYXJlcG9pbnQiLCJpc3VzZXIiOiJ0cnVlIiwiY2FjaGVrZXkiOiIwaC5mfG1lbWJlcnNoaXB8MTAwMzIwMDA1ZGYwZjViMEBsaXZlLmNvbSIsInR0IjoiMCIsInVzZVBlcnNpc3RlbnRDb29raWUiOiIzIn0.VFJ2eWZ4cTlrOS9IdDZJQzE4Yjg0VzFHRzduT2xuVG9zNUdpYmxYRERpOD0&encodeFailures=1&width=1325&height=597&srcWidth=&srcHeight="/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css" integrity="sha512-OdEXQYCOldjqUEsuMKsZRj93Ht23QRlhIb8E/X0sbwZhme8eUw6g8q7AdxGJKakcBbv7+/PX0Gc2btf7Ru8cZA==" crossorigin="anonymous" />
+
+</head>
+<body style="background-color: #F3EBF6;">
+<header class="site-header" id="header">
+  <h1 class="site-header__title" data-lead-id="site-header-title">THANK YOU!</h1>
+</header>
+
+<div class="main-content">
+  <i class="fa fa-check main-content__checkmark" id="checkmark"></i>
+  <p class="main-content__body" data-lead-id="main-content-body">Thanks a bunch for purchasing products from our
+    grocery store. It means a lot to
+    us, just like you do! We really appreciate you giving us a moment of your time today. Thanks for being you.</p>
+</div>
+<div>
+  <form  method="get">
+    {% csrf_token %}
+    <br>
+    <button type="submit" class="submit" >Go to HomePage</button>
+  </form>
+</div>
+
+
+<footer class="site-footer" id="footer">
+  <p class="site-footer__fineprint" id="fineprint">Copyright ©2021 | All Rights Reserved</p>
+</footer>
+</body>
+</html>

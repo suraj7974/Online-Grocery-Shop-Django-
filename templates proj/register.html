@@ -1,0 +1,178 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <title>Sign up</title>
+
+    <style>
+         body {
+        background-color: #F3EBF6;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .main {
+        background-color: #FFFFFF;
+        width: 1000px;
+        height: 450px;
+        margin: 7em auto;
+        border-radius: 1.5em;
+        box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+        position : relative;
+    }
+
+    .sign {
+        padding-top: 40px;
+        color: #8C55AA;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: bold;
+        font-size: 23px;
+    }
+
+    .un {
+    width: 45%;
+    color: rgb(38, 50, 56);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 1px solid #E1BEE7;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    text-align: center;
+    margin-bottom: 27px;
+    font-family: 'Ubuntu', sans-serif;
+    }
+
+    form.form1 {
+        padding-top: 40px;
+    }
+
+    .pass {
+            width: 45%;
+    color: rgb(38, 50, 56);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 20px;
+    border: 1px solid ;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 1px solid #E1BEE7;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    text-align: center;
+    margin-bottom: 27px;
+    font-family: 'Ubuntu', sans-serif;
+    }
+
+
+    .un:focus, .pass:focus {
+        border: 2px solid rgba(0, 0, 0, 0.18) !important;
+
+    }
+
+    .submit {
+      cursor: pointer;
+        border-radius: 5em;
+        color: #fff;
+        background: linear-gradient(to right, #9C27B0, #E040FB);
+        border: 0;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        font-family: 'Ubuntu', sans-serif;
+        margin-left: 44%;
+        font-size: 15px;
+        box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+        outline: none;
+    }
+
+
+    @media (max-width: 600px) {
+        .main {
+            border-radius: 0px;
+        }
+
+
+  </style>
+
+    <link rel="icon" type="image/png"
+          href="https://southeastasia1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpeg&cs=fFNQTw&docid=https%3A%2F%2Fviteduin59337-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!-TkH7zP3u0qzVB9cQZpab9xSy5HTcYNGiPVAzVGJB7lAhPiWukEhTIP3NrJ--oMG%2Fitems%2F01TUWEME2CWUI2Q4OB6VC37TBHUAD5RVQT%3Fversion%3DPublished&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvdml0ZWR1aW41OTMzNy1teS5zaGFyZXBvaW50LmNvbUBjN2IwMGQ3Zi1hZDk5LTQ0MmEtYjEyZi1jMmM5MTIwNDRmZGMiLCJpc3MiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAiLCJuYmYiOiIxNjE4NDc3MjAwIiwiZXhwIjoiMTYxODQ5ODgwMCIsImVuZHBvaW50dXJsIjoiWWtyTEl2Zzg0bTlyVXhmazJSaE5MUC9aQVUzQURaNGNFZGtLRjEyT0dCUT0iLCJlbmRwb2ludHVybExlbmd0aCI6IjEyMyIsImlzbG9vcGJhY2siOiJUcnVlIiwidmVyIjoiaGFzaGVkcHJvb2Z0b2tlbiIsInNpdGVpZCI6IlpXWXdOek01WmprdFpqY3pNeTAwWVdKaUxXSXpOVFF0TVdZMVl6UXhPV0UxWVRabSIsInNpZ25pbl9zdGF0ZSI6IltcImttc2lcIl0iLCJuYW1laWQiOiIwIy5mfG1lbWJlcnNoaXB8eWFzaC5mYWxrZUB2aXQuZWR1LmluIiwibmlpIjoibWljcm9zb2Z0LnNoYXJlcG9pbnQiLCJpc3VzZXIiOiJ0cnVlIiwiY2FjaGVrZXkiOiIwaC5mfG1lbWJlcnNoaXB8MTAwMzIwMDA1ZGYwZjViMEBsaXZlLmNvbSIsInR0IjoiMCIsInVzZVBlcnNpc3RlbnRDb29raWUiOiIzIn0.VFJ2eWZ4cTlrOS9IdDZJQzE4Yjg0VzFHRzduT2xuVG9zNUdpYmxYRERpOD0&encodeFailures=1&width=1325&height=597&srcWidth=&srcHeight="/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css" integrity="sha512-OdEXQYCOldjqUEsuMKsZRj93Ht23QRlhIb8E/X0sbwZhme8eUw6g8q7AdxGJKakcBbv7+/PX0Gc2btf7Ru8cZA==" crossorigin="anonymous" />
+
+</head>
+
+<body>
+<div class="main">
+    <p class="sign" align="center">Sign up</p>
+    <form class="form1" method="post" action="register">
+        {% csrf_token %}
+        <input class="un " type="text" align="center" placeholder="First name" required name="first_name">
+        <input class="un " type="text" align="center" placeholder="Last name" required name="last_name">
+        <input class="un " type="text" align="center" placeholder="Username" required name="username">
+        <input class="un " type="email" align="center" placeholder="E-mail" required name="email">
+        <input class="pass" type="password" align="center" placeholder="Password" required name="password1" id="myinput">
+        <input class="pass" type="password" align="center" placeholder="Confirm Password" required name="password2"
+               id="myinput1">
+
+
+        <div style="display: flex; justify-content:center; align-items: center ">
+            <input type="checkbox" onclick="myfunction(), myfunction1()" style="margin-right: 15px" >show password
+        </div>
+
+        <script>
+           function myfunction(){
+             var x=document.getElementById("myinput");
+             if(x.type==="password"){
+               x.type="text"
+             }
+             else{
+               x.type="password"
+             }
+           }
+
+           function myfunction1(){
+             var x=document.getElementById("myinput1");
+             if(x.type==="password"){
+               x.type="text"
+             }
+             else{
+               x.type="password"
+             }
+           }
+        </script>
+        <br>
+        <button type="submit" class="submit">Sign up</button>
+        <br>
+        <br>
+        <div style="display: flex; justify-content:left; align-items: left; margin-left: 40px ">
+            <a href="/login" >already have an account?? sign in here!! </a>
+        </div>
+
+</div>
+
+{% for message in messages %}
+<script>
+        window.onload = function(){
+            alert('{{message}}')
+        }
+    </script>
+{% endfor %}
+
+
+
+
+</body>
+
+</html>
