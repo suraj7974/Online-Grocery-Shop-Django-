@@ -40,7 +40,6 @@
     nav ul li a:hover {
       background: linear-gradient(to right, #9C27B0, #E040FB);
       color: white;
-
     }
     nav ul li a:not(:only-child):after {
       padding-left: 4px;
@@ -320,14 +319,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.4.1/vanilla-tilt.min.js">
 </script>
 
-<script>
+{% comment %} <script>
         VanillaTilt.init(document.querySelectorAll(".card"), {
             max: 70,
             speed: 400,
             "mouse-event-element":true,
 
           });
-</script>
+</script> {% endcomment %}
 
 
 
