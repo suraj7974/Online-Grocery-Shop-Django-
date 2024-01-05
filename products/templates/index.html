@@ -251,7 +251,7 @@
     {% for product in products %}
     <div class="col" style="padding: 20px" >
         <div class="card"
-             style="width: 18rem; border-radius: 1.5rem; box-shadow: 2px 10px 20px grey;
+             style="width: 18rem; border-radius: 1.5rem;  ;
                      font-size: 20p; font-family: Comic Sans MS; margin-top: 60px; outline: none; border: none"
             id={{product.id}}>
             <img src="{{ product.image_url.url }}" class="card-img-top" alt="..."
@@ -274,7 +274,7 @@
                         <input type="text" value="{{ product.id }}" hidden name="product">
                         <input type="text" value="True" hidden name="remove">
                         <input type="submit" value=" - " class="btn btn-block"
-                               style="background: linear-gradient(to right, #9C27B0, #E040FB); border-radius: 20px; outline: none; border: none; color: white;
+                               style="background: linear-gradient(to right, #dbd6daeb, #1bbbce); border-radius: 20px; outline: none; border: none; color: white;
                                             font-size: 15px">
                     </form>
 
@@ -286,7 +286,7 @@
                         {% csrf_token %}
                         <input type="text" value="{{ product.id }}" hidden name="product">
                         <input type="submit" value=" + " class="btn btn-block"
-                               style="background: linear-gradient(to right, #9C27B0, #E040FB); border-radius: 20px; outline: none; border: none; color: white;
+                               style="background: linear-gradient(to right, #dbd6daeb, #1bbbce); border-radius: 20px; outline: none; border: none; color: white;
                                             font-size: 15px">
                     </form>
 
@@ -297,7 +297,7 @@
                     <input type="text" value="{{ product.id }}" hidden name="product">
 
                     <button class="btn btn-primary"
-                            style="background: linear-gradient(to right, #9C27B0, #E040FB); border-radius: 20px; outline: none; border: none; width: 100%;"
+                            style="background: linear-gradient(to right, #dbd6daeb, #1bbbce); border-radius: 20px; outline: none; border: none; width: 100%; border-color: black;"
                             type="submit" >Add to
                         Cart</button>
 
@@ -318,17 +318,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.4.1/vanilla-tilt.min.js">
 </script>
-
-{% comment %} <script>
-        VanillaTilt.init(document.querySelectorAll(".card"), {
-            max: 70,
-            speed: 400,
-            "mouse-event-element":true,
-
-          });
-</script> {% endcomment %}
-
-
 
 
 {% endblock %}
