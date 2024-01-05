@@ -8,6 +8,157 @@
   <title>Sign in</title>
 
   <style>
+    body {
+      align-items: center;
+      background-color: #f5f2f5;
+      display: flex;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .form {
+      background-color: #fefefe;
+      border-radius: 20px;
+      box-sizing: border-box;
+      height: 450px;
+      padding: 20px;
+      width: 320px;
+      box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    }
+
+    .title {
+      color: #eee;
+      font-family: sans-serif;
+      font-size: 36px;
+      font-weight: 600;
+      margin-top: 30px;
+    }
+
+    .subtitle {
+      color: #eee;
+      font-family: sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    .input-container {
+      height: 50px;
+      position: relative;
+      width: 100%;
+    }
+
+    .ic1 {
+      margin-top: 40px;
+    }
+
+    .ic2 {
+      margin-top: 30px;
+    }
+
+    .input {
+      background-color: #eeebee;
+      border-radius: 12px;
+      border: 0;
+      box-sizing: border-box;
+      color: #000000;
+      font-size: 18px;
+      height: 100%;
+      outline: 0;
+      padding: 4px 20px 0;
+      width: 100%;
+    }
+
+    .btn {
+      cursor: pointer;
+      border-radius: 5em;
+      color: #fff;
+      background: linear-gradient(to right, #9C27B0, #E040FB);
+      border: 0;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      font-family: 'Ubuntu', sans-serif;
+      margin-left: 35%;
+      font-size: 15px;
+      box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+      outline: none;
+      width: 280px;
+      height: 50px;
+      position: relative;
+      right: 95;
+      top: 40px;
+    }
+
+    .cut {
+      background-color: #ffffff;
+      border-radius: 10px;
+      height: 20px;
+      left: 20px;
+      position: absolute;
+      top: -20px;
+      transform: translateY(0);
+      transition: transform 200ms;
+      width: 76px;
+    }
+
+    .cut-short {
+      width: 70px;
+    }
+
+    .input:focus~.cut,
+    .input:not(:placeholder-shown)~.cut {
+      transform: translateY(8px);
+    }
+
+    .placeholder {
+      color: #65657b;
+      font-family: sans-serif;
+      left: 20px;
+      line-height: 14px;
+      pointer-events: none;
+      position: absolute;
+      transform-origin: 0 50%;
+      transition: transform 200ms, color 200ms;
+      top: 20px;
+    }
+
+    .input:focus~.placeholder,
+    .input:not(:placeholder-shown)~.placeholder {
+      transform: translateY(-30px) translateX(10px) scale(0.75);
+    }
+
+    .input:not(:placeholder-shown)~.placeholder {
+      color: #808097;
+    }
+
+    .input:focus~.placeholder {
+      color: #dc2f55;
+    }
+
+    .submit {
+      background-color: #08d;
+      border-radius: 12px;
+      border: 0;
+      box-sizing: border-box;
+      color: #eee;
+      cursor: pointer;
+      font-size: 18px;
+      height: 50px;
+      margin-top: 38px;
+      outline: 0;
+      text-align: center;
+      width: 100%;
+      position: relative;
+      right: 100px;
+    }
+
+    .submit:active {
+      background-color: #06b;
+    }
+
+    /* 
          body {
         background-color: #F3EBF6;
         font-family: 'Ubuntu', sans-serif;
@@ -72,84 +223,100 @@
     text-align: center;
     margin-bottom: 27px;
     font-family: 'Ubuntu', sans-serif;
-    }
+    } */
 
 
-    .un:focus, .pass:focus {
-        border: 2px solid rgba(0, 0, 0, 0.18) !important;
-        color: #8C55AA;
+    .un:focus,
+    .pass:focus {
+      border: 2px solid rgba(0, 0, 0, 0.18) !important;
+      color: #8C55AA;
     }
 
     .submit {
       cursor: pointer;
-        border-radius: 5em;
-        color: #fff;
-        background: linear-gradient(to right, #9C27B0, #E040FB);
-        border: 0;
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-bottom: 10px;
-        padding-top: 10px;
-        font-family: 'Ubuntu', sans-serif;
-        margin-left: 35%;
-        font-size: 15px;
-        box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
-        outline: none;
+      border-radius: 5em;
+      color: #fff;
+      background: linear-gradient(to right, #9C27B0, #E040FB);
+      border: 0;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      font-family: 'Ubuntu', sans-serif;
+      margin-left: 35%;
+      font-size: 15px;
+      box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+      outline: none;
     }
 
     @media (max-width: 600px) {
-        .main {
-            border-radius: 0px;
-        }
-
+      .main {
+        border-radius: 0px;
       }
+
+    }
   </style>
 
-    <link rel="icon" type="image/png"
-          href="https://southeastasia1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpeg&cs=fFNQTw&docid=https%3A%2F%2Fviteduin59337-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!-TkH7zP3u0qzVB9cQZpab9xSy5HTcYNGiPVAzVGJB7lAhPiWukEhTIP3NrJ--oMG%2Fitems%2F01TUWEME2CWUI2Q4OB6VC37TBHUAD5RVQT%3Fversion%3DPublished&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvdml0ZWR1aW41OTMzNy1teS5zaGFyZXBvaW50LmNvbUBjN2IwMGQ3Zi1hZDk5LTQ0MmEtYjEyZi1jMmM5MTIwNDRmZGMiLCJpc3MiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAiLCJuYmYiOiIxNjE4NDc3MjAwIiwiZXhwIjoiMTYxODQ5ODgwMCIsImVuZHBvaW50dXJsIjoiWWtyTEl2Zzg0bTlyVXhmazJSaE5MUC9aQVUzQURaNGNFZGtLRjEyT0dCUT0iLCJlbmRwb2ludHVybExlbmd0aCI6IjEyMyIsImlzbG9vcGJhY2siOiJUcnVlIiwidmVyIjoiaGFzaGVkcHJvb2Z0b2tlbiIsInNpdGVpZCI6IlpXWXdOek01WmprdFpqY3pNeTAwWVdKaUxXSXpOVFF0TVdZMVl6UXhPV0UxWVRabSIsInNpZ25pbl9zdGF0ZSI6IltcImttc2lcIl0iLCJuYW1laWQiOiIwIy5mfG1lbWJlcnNoaXB8eWFzaC5mYWxrZUB2aXQuZWR1LmluIiwibmlpIjoibWljcm9zb2Z0LnNoYXJlcG9pbnQiLCJpc3VzZXIiOiJ0cnVlIiwiY2FjaGVrZXkiOiIwaC5mfG1lbWJlcnNoaXB8MTAwMzIwMDA1ZGYwZjViMEBsaXZlLmNvbSIsInR0IjoiMCIsInVzZVBlcnNpc3RlbnRDb29raWUiOiIzIn0.VFJ2eWZ4cTlrOS9IdDZJQzE4Yjg0VzFHRzduT2xuVG9zNUdpYmxYRERpOD0&encodeFailures=1&width=1325&height=597&srcWidth=&srcHeight="/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css" integrity="sha512-OdEXQYCOldjqUEsuMKsZRj93Ht23QRlhIb8E/X0sbwZhme8eUw6g8q7AdxGJKakcBbv7+/PX0Gc2btf7Ru8cZA==" crossorigin="anonymous" />
+  <link rel="icon" type="image/png"
+    href="https://southeastasia1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpeg&cs=fFNQTw&docid=https%3A%2F%2Fviteduin59337-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!-TkH7zP3u0qzVB9cQZpab9xSy5HTcYNGiPVAzVGJB7lAhPiWukEhTIP3NrJ--oMG%2Fitems%2F01TUWEME2CWUI2Q4OB6VC37TBHUAD5RVQT%3Fversion%3DPublished&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvdml0ZWR1aW41OTMzNy1teS5zaGFyZXBvaW50LmNvbUBjN2IwMGQ3Zi1hZDk5LTQ0MmEtYjEyZi1jMmM5MTIwNDRmZGMiLCJpc3MiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAiLCJuYmYiOiIxNjE4NDc3MjAwIiwiZXhwIjoiMTYxODQ5ODgwMCIsImVuZHBvaW50dXJsIjoiWWtyTEl2Zzg0bTlyVXhmazJSaE5MUC9aQVUzQURaNGNFZGtLRjEyT0dCUT0iLCJlbmRwb2ludHVybExlbmd0aCI6IjEyMyIsImlzbG9vcGJhY2siOiJUcnVlIiwidmVyIjoiaGFzaGVkcHJvb2Z0b2tlbiIsInNpdGVpZCI6IlpXWXdOek01WmprdFpqY3pNeTAwWVdKaUxXSXpOVFF0TVdZMVl6UXhPV0UxWVRabSIsInNpZ25pbl9zdGF0ZSI6IltcImttc2lcIl0iLCJuYW1laWQiOiIwIy5mfG1lbWJlcnNoaXB8eWFzaC5mYWxrZUB2aXQuZWR1LmluIiwibmlpIjoibWljcm9zb2Z0LnNoYXJlcG9pbnQiLCJpc3VzZXIiOiJ0cnVlIiwiY2FjaGVrZXkiOiIwaC5mfG1lbWJlcnNoaXB8MTAwMzIwMDA1ZGYwZjViMEBsaXZlLmNvbSIsInR0IjoiMCIsInVzZVBlcnNpc3RlbnRDb29raWUiOiIzIn0.VFJ2eWZ4cTlrOS9IdDZJQzE4Yjg0VzFHRzduT2xuVG9zNUdpYmxYRERpOD0&encodeFailures=1&width=1325&height=597&srcWidth=&srcHeight=" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css"
+    integrity="sha512-OdEXQYCOldjqUEsuMKsZRj93Ht23QRlhIb8E/X0sbwZhme8eUw6g8q7AdxGJKakcBbv7+/PX0Gc2btf7Ru8cZA=="
+    crossorigin="anonymous" />
 
 </head>
 
 <body>
-<div class="main">
-  <p class="sign" align="center">Sign in</p>
-  <form class="form1" method="post" action="login">
-    {% csrf_token %}
-    <input class="un " type="text" align="center" placeholder="Username" required name="username">
-    <input class="pass" type="password" align="center" placeholder="Password" required name="password" id="myinput"><br>
+  <div class="main">
+    <form class="form" method="post" action="login">
+      {% csrf_token %}
+      <p class="sign" align="center">Sign in</p>
+      
 
-    <div style="display: flex; justify-content:center; align-items: center ">
-      <input type="checkbox" onclick="myfunction()" style="margin-right: 15px" >show password
-    </div>
 
-    <script>
-   function myfunction(){
-     var x=document.getElementById("myinput");
-     if(x.type==="password"){
-       x.type="text"
-     }
-     else{
-       x.type="password"
-     }
-   }
-   </script>
-    <br>
-    <button type="submit" class="submit">Sign in</button>
-    <br>
-    <br>
-    <div style="display: flex; justify-content: center; align-items: center ">
-      <a style="text-decoration: none;" href="/register" >Don't have account?? Sign up here!!</a>
-    </div>
-</div>
+      <div class="input-container ic1">
+        <input type="text" class="input" id="firstname" required name="username" placeholder="  " />
+        <div class="cut"></div>
+        <label for="firstname" class="placeholder">Username</label>
+      </div>
 
-{% for message in messages %}
-    <script>
-        window.onload = function(){
-            alert('{{message}}')
+      <div class="input-container ic2">
+        <input type="password" class="input" id="myinput" required name="password" placeholder="  " />
+        <div class="cut cut-short"></div>
+        <label for="myinput" class="placeholder">Password</label>
+      </div>
+
+      <div style="display: flex; justify-content:center; align-items: center;top: 18px;
+    position: relative; ">
+        <input type="checkbox" onclick="myfunction()" style="margin-right: 15px">show password
+      </div>
+
+      <script>
+        function myfunction() {
+          var x = document.getElementById("myinput");
+          if (x.type === "password") {
+            x.type = "text"
+          }
+          else {
+            x.type = "password"
+          }
         }
-    </script>
-{% endfor %}
+      </script>
+      <br>
+      <button type="submit" class="btn">Sign in</button>
+      <br>
+      <br>
+      <div style="display: flex; justify-content: center; align-items: center ">
+        <a style="text-decoration: none; position: relative; top: 85px;" href="/register">Don't have account?? Sign up here!!</a>
+      </div>
+  </div>
+
+  {% for message in messages %}
+  <script>
+    window.onload = function () {
+      alert('{{message}}')
+    }
+  </script>
+  {% endfor %}
 
 
 
