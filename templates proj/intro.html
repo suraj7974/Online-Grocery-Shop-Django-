@@ -145,11 +145,12 @@
            class="img-bg"></image>
 
     <div class="nav-area">
+        
         <div class="logo">Grocery Store</div>
         <ul class="menu-area">
             {% if user.is_authenticated %}
             <li style="color: white; font-family: cursive;; font-weight: bold;
-                font-size: 30px; float: left; ">
+                font-size: 30px; ">
                 Hi, {{user.username}}</li>
             <li><a href="/logout">Log out</a></li>
             <li><a href="/products">Products</a></li>
