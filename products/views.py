@@ -17,7 +17,7 @@ def index(request):
     categorie_id = request.GET.get('categorie')
     if categorie_id:
         if categorie_id == "10":
-            print("yash")
+            print("suraj")
             products = Product.objects.all()
         else:
             products = Product.get_all_products_by_categorieid(categorie_id)
