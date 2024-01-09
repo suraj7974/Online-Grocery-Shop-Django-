@@ -4,6 +4,7 @@ from .models import Product, Offer, Order, Categorie
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
 
+
 # Create your views here.
 
 
@@ -17,7 +18,7 @@ def index(request):
     categorie_id = request.GET.get('categorie')
     if categorie_id:
         if categorie_id == "10":
-            print("yash")
+            print("suraj")
             products = Product.objects.all()
         else:
             products = Product.get_all_products_by_categorieid(categorie_id)
@@ -94,3 +95,4 @@ def thank_you(request):
 
     else:
         return redirect('/')
+

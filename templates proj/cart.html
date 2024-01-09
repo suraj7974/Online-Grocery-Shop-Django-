@@ -196,8 +196,8 @@
                                     class="text-muted">Order Subtotal </strong><strong>&#8377
                                 {{products|total_cart:request.session.cart}}</strong></li>
                             <li class="d-flex justify-content-between py-3 border-bottom"><strong
-                                    class="text-muted">Shipping and handling(tax included)</strong>
-                                <strong></strong>&#8377 100.00</li>
+                                    class="text-muted">Shipping</strong>
+                                <strong></strong>&#8377 1.00</li>
 
                             {% if codes is not None %}
                             {% if offers|coupon:codes %}
@@ -238,7 +238,7 @@
                         <form method="post">
                             {% csrf_token %}
                             <a  type="submit" class="btn btn-dark rounded-pill py-2 btn-block"
-                                style="background: linear-gradient(to right, #9C27B0, #E040FB); border-radius: 20px; outline: none; border: none; color: white;
+                                style="background: linear-gradient(45deg, #e4c7ea, #3486d8); border-radius: 20px; outline: none; border: none; color: white;
                                             font-size: 15px" data-bs-toggle="modal" data-bs-target="#exampleModal">Procceed
                                 to checkout</a>
                         </form>
@@ -278,7 +278,7 @@
         </div>
     </div>
 </div>
-<!--                                        End MODAL                                                          -->
+
 
 
 
