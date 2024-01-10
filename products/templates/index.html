@@ -70,6 +70,7 @@
       height: 70px;
       width: 70px;
     }
+    
 
     @media only screen and (max-width: 800px) {
       .nav-mobile {
@@ -146,7 +147,7 @@
       top: 0;
       height: 70px;
       width: 100%;
-      background: #F3EBF6;;
+      background: #F3EBF6;
     }
 
     /*
@@ -209,7 +210,7 @@
 
 <section class="navigation">
     <div class="nav-container">
-      <span style="color: #463f3f; position:fixed;    left: 183px;
+      <span style="color: #ffffff; position:fixed;    left: 183px;
       top: 2px;
       padding: 23px;">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
@@ -219,7 +220,7 @@
       Hi, {{user.username}}</a></span>
       
             <div class="brand">
-            <a >PRODUCTS</a>
+            <a style="position:fixed; left:390px;">PRODUCTS</a>
         </div>
         <nav>
             <div class="nav-mobile">
@@ -228,18 +229,18 @@
             <ul class="nav-list">
                 <!-- Setting the links to #! will ensure that no action takes place on click. -->
                 {% if user.is_authenticated %}
-                <li><a href="/">Home</a></li>
+                <li><a href="/" style="position:fixed; right:540px;">Home</a></li>
                 {% comment %} <li><a href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                         <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                     </svg>
                     Hi, {{user.username}}</a></li> {% endcomment %}
-                <li><a href="cart">My Cart
+                <li><a href="cart" style="position:fixed; right:415px;">My Cart
                     <span class="badge bg-light text-dark">
                         {{request.session.cart.keys|length}}</span>
                 </a></li>
-                <li><a href="#">All</a>
+                <li><a href="#" style="position:fixed; right:340px;">All</a>
                     <ul class="nav-dropdown" style="">
                         <li><a href="/products?categorie=10">All</a></li>
                         {% for categorie in categories %}
@@ -247,9 +248,9 @@
                         {% endfor %}
                     </ul>
                 </li>
-                <li><a href="/logout">Log out</a></li>
+                <li><a href="/logout" style="position:fixed; right:255px;">Log out</a></li>
                 {% endif %}
-                <li><a href="/about-us">About</a></li>
+                <li><a href="/about-us" style="position:fixed; right:180px;">About</a></li>
             </ul>
         </nav>
     </div>
@@ -261,7 +262,7 @@
     <div class="col" style="padding: 20px" >
         <div class="card"
              style="width: 18rem; border-radius: 1.5rem;  ;
-                     font-size: 20p; font-family: Comic Sans MS; margin-top: 60px; outline: none; border: none"
+                     font-size: 20p; font-family: Comic Sans MS; margin-top: 60px; outline: none; border: none; background:rgba(256 256 256 / 13%); border:1px solid white;"
             id={{product.id}}>
             <img src="{{ product.image_url.url }}" class="card-img-top" alt="..."
                  style="width: 18 rem;height: 14rem;border-radius: 1.5rem">
@@ -306,7 +307,7 @@
                     <input type="text" value="{{ product.id }}" hidden name="product">
 
                     <button class="btn btn-primary"
-                            style="background: linear-gradient(to right, #dbd6daeb, #1bbbce); border-radius: 20px; outline: none; border: none; width: 100%; border-color: black;"
+                            style="background: linear-gradient(to right, #3c7cb9, #1562a8); border-radius: 20px; outline: none; border: none; width: 100%; border-color: black;"
                             type="submit" >Add to
                         Cart</button>
 

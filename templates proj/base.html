@@ -41,7 +41,6 @@
       }
       nav {
         float: right;
-        
       }
       nav ul {
         list-style: none;
@@ -56,8 +55,8 @@
         display: block;
         padding: 0 20px;
         line-height: 70px;
-        background: #f3ebf6;
-        color: #463f3f;
+
+        color: #ffffff;
         text-decoration: none;
         /*
       The full path of this code is nav ul li a:not(:only-child):after. This means that the code will apply to any a tag in our nav list that is NOT an only child, aka any dropdown. The :after means it comes after the output of the tag. I’ve decided that to specify any nav item as a dropdown, it will be followed by a unicode arrow – ▾ (#9662).
@@ -66,8 +65,8 @@
       nav ul li a:hover {
         /* background: linear-gradient(to right, #9c27b0, #e040fb); */
         font-size: 18px;
-        font-weight:600;
-      
+        font-weight: 600;
+
         color: rgb(22, 21, 21);
       }
       nav ul li a:not(:only-child):after {
@@ -80,17 +79,23 @@
       nav ul li ul li a {
         padding: 15px;
         line-height: 20px;
-        z-index: 1;
+      }
+      body img {
+        width: 100%;
       }
 
       .nav-dropdown {
         position: absolute;
+        right: 70px;
+        top: 60px;
         z-index: 1;
         /* Guarantees that the dropdown will display on top of any content. */
         box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
         display: none;
+        background: linear-gradient(to right, #106fc7,#3a6e9f);
+        border-radius: 5px;
+        opacity: 0.9;
       }
-
       .nav-mobile {
         display: none;
         position: absolute;
@@ -177,8 +182,10 @@
         top: 0;
         height: 70px;
         width: 100%;
-        background: #f3ebf6;
+        background: rgba(0, 0, 0, 0.2);
         z-index: 100;
+        left: 0;
+        color: white;
       }
 
       /*
@@ -235,17 +242,22 @@
         }); // end DOM ready
       })(jQuery); // end jQuery
     </script>
-    
   </head>
   <body
     style="
-      background-image: url();
-      background-size: cover;
-      background-attachment: fixed;
-      background-color: #f3ebf6;
-    "
-  >
-    
+      background: linear-gradient(to right, #106fc7, #3a6e9f);
+      /* background-attachment: fixed;   */
+    ">
+
+    <div
+      style="
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
+      opacity: 0.09;
+        background-image: url(https://i.pinimg.com/736x/25/a3/ba/25a3baa1ab8e8b79bc8ad0d7a0eabebc.jpg);
+      "
+    ></div>
     <div class="container">{% block content %} {% endblock %}</div>
   </body>
 </html>
