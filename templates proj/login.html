@@ -9,21 +9,43 @@
 
   <style>
     body {
+      background-image: url(https://i.pinimg.com/originals/bd/d6/62/bdd662ca976a04e80f6155e55fdf43d2.jpg);
+      background-size: 100% 100%;
       align-items: center;
       background-color: #f5f2f5;
       display: flex;
       justify-content: center;
-      height: 100vh;
+      /* height: 100vh; */
+      background-repeat: no-repeat;
+      backdrop-filter: blur(15px);
     }
 
     .form {
-      background-color: #fefefe;
-      border-radius: 20px;
+      background-color: #979797;
+      color: white;
+      background: rgb(0, 0, 0, 0.15);
+      /* border-radius: 20px; */
       box-sizing: border-box;
       height: 450px;
+      /* width: 520px; */
       padding: 20px;
-      width: 320px;
-      box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+      /* box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14); */
+      /* opacity: .1; */
+      
+    }
+    .body_1{
+      display: flex;
+      border: 1px solid white;
+      width: 520px;
+    }
+    .cart_pic{
+      /* background-color: white; */
+      background: rgb(0, 0, 0, 0.15);
+      height: 450px;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .title {
@@ -57,9 +79,10 @@
     }
 
     .input {
-      background-color: #eeebee;
+      background-color: #273c51;
+      background: rgb(0, 0, 0, 0.1);
       border-radius: 12px;
-      border: 0;
+      border: .4px solid white;
       box-sizing: border-box;
       color: #000000;
       font-size: 18px;
@@ -91,8 +114,9 @@
       top: 40px;
     }
 
-    .cut {
-      background-color: #ffffff;
+    /* .cut {
+      background-color: #273c51;
+      background: rgb(0, 0, 0, 0.1);
       border-radius: 10px;
       height: 20px;
       left: 20px;
@@ -135,7 +159,7 @@
 
     .input:focus~.placeholder {
       color: #dc2f55;
-    }
+    } */
 
     .submit {
       background-color: #08d;
@@ -198,49 +222,57 @@
 </head>
 
 <body>
-  <div class="main">
-    <form class="form" method="post" action="login">
-      {% csrf_token %}
-      <p class="sign" align="center">Sign in</p>
-      
+  <div class="body_1">
+    <div class="main">
+      <form class="form" method="post" action="login">
+        {% csrf_token %}
+        <p class="sign" align="center">Sign in</p>
 
 
-      <div class="input-container ic1">
-        <input type="text" class="input" id="firstname" required name="username" placeholder="  " />
-        <div class="cut"></div>
-        <label for="firstname" class="placeholder">Username</label>
-      </div>
 
-      <div class="input-container ic2">
-        <input type="password" class="input" id="myinput" required name="password" placeholder="  " />
-        <div class="cut cut-short"></div>
-        <label for="myinput" class="placeholder">Password</label>
-      </div>
+        <div class="input-container ic1">
+          <input type="text" class="input" id="firstname" required name="username" placeholder=" Username " />
+          <div class="cut"></div>
+          <!-- <label for="firstname" class="placeholder">Username</label> -->
+        </div>
 
-      <div style="display: flex; justify-content:center; align-items: center;top: 18px;
+        <div class="input-container ic2">
+          <input type="password" class="input" id="myinput" required name="password" placeholder=" password " />
+          <div class="cut cut-short"></div>
+          <!-- <label for="myinput" class="placeholder">Password</label> -->
+        </div>
+
+        <div style="display: flex; justify-content:center; align-items: center;top: 18px;
     position: relative; ">
-        <input type="checkbox" onclick="myfunction()" style="margin-right: 15px">show password
-      </div>
+          <input type="checkbox" onclick="myfunction()" style="margin-right: 15px">show password
+        </div>
 
-      <script>
-        function myfunction() {
-          var x = document.getElementById("myinput");
-          if (x.type === "password") {
-            x.type = "text"
+        <script>
+          function myfunction() {
+            var x = document.getElementById("myinput");
+            if (x.type === "password") {
+              x.type = "text"
+            }
+            else {
+              x.type = "password"
+            }
           }
-          else {
-            x.type = "password"
-          }
-        }
-      </script>
-      <br>
-      <button type="submit" class="btn">Sign in</button>
-      <br>
-      <br>
-      <div style="display: flex; justify-content: center; align-items: center ">
-        <a style="text-decoration: none; position: relative; top: 85px;" href="/register">Don't have account?? Sign up here!!</a>
-      </div>
+        </script>
+        <br>
+        <button type="submit" class="btn">Sign in</button>
+        <br>
+        <br>
+        <div style="display: flex; justify-content: center; align-items: center ">
+          <a style="text-decoration: none; position: relative; top: 85px;" href="/register">Don't have account?? Sign up
+            here!!</a>
+        </div>
+    </div>
+    <div class="cart_pic">
+      <img src="https://i.pinimg.com/originals/7a/3f/76/7a3f76a27f01073cfc3edd8393de990f.jpg" style="background:#a6eff9 ; height: 200px; width: 200px;" alt="">
+    </div>
+
   </div>
+
 
   {% for message in messages %}
   <script>

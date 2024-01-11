@@ -36,7 +36,7 @@ def total_cart(products, cart):
 
 @register.filter(name='total_100')
 def total_100(products, cart):
-    ans = 100 + total_cart(products, cart)
+    ans = 9 + total_cart(products, cart)
     return ans
 
 
