@@ -8,91 +8,31 @@
   <title>Sign up</title>
 
   <style>
-    /* body {
-        background-color: #F3EBF6;
-        font-family: 'Ubuntu', sans-serif;
-    }
-
-    .main {
-        background-color: #FFFFFF;
-        width: 1000px;
-        height: 450px;
-        margin: 7em auto;
-        border-radius: 1.5em;
-        box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
-        position : relative;
-    }
-
-    .sign {
-        padding-top: 40px;
-        color: #8C55AA;
-        font-family: 'Ubuntu', sans-serif;
-        font-weight: bold;
-        font-size: 23px;
-    }
-
-    .un {
-    width: 45%;
-    color: rgb(38, 50, 56);
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 1px;
-    background: rgba(136, 126, 126, 0.04);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    outline: none;
-    box-sizing: border-box;
-    border: 1px solid #E1BEE7;
-    margin-bottom: 50px;
-    margin-left: 30px;
-    text-align: center;
-    margin-bottom: 27px;
-    font-family: 'Ubuntu', sans-serif;
-    }
-
-    form.form1 {
-        padding-top: 40px;
-    }
-
-    .pass {
-            width: 45%;
-    color: rgb(38, 50, 56);
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 1px;
-    background: rgba(136, 126, 126, 0.04);
-    padding: 10px 20px;
-    border: 1px solid ;
-    border-radius: 20px;
-    outline: none;
-    box-sizing: border-box;
-    border: 1px solid #E1BEE7;
-    margin-bottom: 50px;
-    margin-left: 30px;
-    text-align: center;
-    margin-bottom: 27px;
-    font-family: 'Ubuntu', sans-serif;
-    } */
-
-
     body {
+      background-image: url('/Images/bgg.png');
+      background-size: 100% 100%;
+      backdrop-filter: blur(15px);
       align-items: center;
       background-color: #f5f2f5;
       display: flex;
       justify-content: center;
-      height: 100vh;
+
     }
 
     .form1 {
-
-      background-color: #fefefe;
-      border-radius: 20px;
+      border: 1px solid white;
+      background-color: #979797;
+      color: white;
+      background: rgb(177 183 184 / 15%);
       box-sizing: border-box;
-      height: 470px;
+      height: 534px;
+      width: 1000px;
       padding: 20px;
-      width: 600px;
-      box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+      box-shadow: 0px 11px 35px 2px rgb(116 182 197 / 50%);
+    }
+    .main{
+      position: relative;
+      top: 31px;
     }
 
     .maincont {
@@ -108,8 +48,14 @@
       margin-top: 30px;
     }
 
-    .sign{
-      font-size: larger;
+    .sign {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .cont2 {
+      position: relative;
+      left: -100px;
     }
 
     .subtitle {
@@ -126,6 +72,11 @@
       width: 100%;
     }
 
+    .input::placeholder {
+      color: #ffffff;
+      font-size: small;
+    }
+
     .ic1 {
       margin-top: 30px;
     }
@@ -135,16 +86,19 @@
     }
 
     .input {
-      background-color: #eeebee;
-      border-radius: 12px;
-      border: 0;
+      background-color: #273c51;
+      background: rgb(0, 0, 0, 0.1);
+
+      border: .4px solid white;
       box-sizing: border-box;
-      color: #000000;
+      color: #ffffff;
       font-size: 18px;
-      height: 100%;
+      height: 39px;
       outline: 0;
       padding: 4px 20px 0;
-      width: 100%;
+      width: 390px;
+      position: relative;
+      left: 55px;
     }
 
     .btn {
@@ -169,57 +123,9 @@
       top: 40px;
     }
 
-    .cut {
-      background-color: #ffffff;
-      border-radius: 10px;
-      height: 20px;
-      left: 20px;
-      position: absolute;
-      top: -20px;
-      transform: translateY(0);
-      transition: transform 200ms;
-      width: 76px;
-    }
-    
-    .cut1 {
-      background-color: #ffffff;
-      border-radius: 10px;
-      height: 20px;
-      left: 20px;
-      position: absolute;
-      top: -20px;
-      transform: translateY(0);
-      transition: transform 200ms;
-      width: 65px;
-    }
-
-    .cut-short {
-      width: 70px;
-    }
-    
-    .cut2{
-      width: 45px;
-    }
-
-    .cut3{
-      width: 115px;
-    }
-
-    .input:focus~.cut,
-    .input:not(:placeholder-shown)~.cut {
-      transform: translateY(8px);
-    }
-
-    .placeholder {
-      color: #65657b;
-      font-family: sans-serif;
-      left: 20px;
-      line-height: 14px;
-      pointer-events: none;
-      position: absolute;
-      transform-origin: 0 50%;
-      transition: transform 200ms, color 200ms;
-      top: 20px;
+    .shiftcont {
+      position: relative;
+      top: 30px;
     }
 
     .input:focus~.placeholder,
@@ -237,7 +143,6 @@
 
     .submit {
       background-color: rgb(58, 103, 132);
-      border-radius: 12px;
       border: 0;
       box-sizing: border-box;
       color: #eee;
@@ -263,22 +168,25 @@
     }
 
     .submit {
+
       cursor: pointer;
-      border-radius: 5em;
-      color: #fff;
-      background: linear-gradient(to right, #b171bf, #5b39e2);
+      color: #6994CD;
+      background-color: #ffffff;
       border: 0;
       padding-left: 40px;
       padding-right: 40px;
       padding-bottom: 10px;
       padding-top: 10px;
       font-family: 'Ubuntu', sans-serif;
-      margin-left: 44%;
+      margin-left: 35%;
       font-size: 15px;
       box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
       outline: none;
+      width: 130px;
+      height: 35px;
       position: relative;
-      left: -164px;
+      right: -77px;
+      top: 8px;
     }
 
 
@@ -299,53 +207,55 @@
 
 <body>
   <div class="main">
-    <p class="sign" align="center">Sign up</p>
+
     <form class="form1" method="post" action="register">
       {% csrf_token %}
+      <p class="sign" align="center">SIGN UP</p>
 
       <div class="maincont">
 
         <div class="cont1">
 
           <div class="input-container ic1">
-            <input type="text" class="input" id="firstname_" required name="first_name" placeholder="  " />
+            <input type="text" class="input" id="firstname_" required name="first_name" placeholder=" FIRSTNAME " />
             <div class="cut cut1"></div>
-            <label for="firstname_" class="placeholder">firstname</label>
+           
           </div>
           <div class="input-container ic1">
-            <input type="text" class="input" id="firstname" required name="username" placeholder="  " />
+            <input type="text" class="input" id="firstname" required name="username" placeholder=" USERNAME " />
             <div class="cut"></div>
-            <label for="firstname" class="placeholder">Username</label>
+            
           </div>
-          <div class="input-container ic2">
-            <input type="password" class="input" id="myinput" required name="password1" placeholder="  " />
+          <div class="input-container ic1">
+            <input type="password" class="input" id="myinput" required name="password1" placeholder=" PASSWORD " />
             <div class="cut cut-short"></div>
-            <label for="myinput" class="placeholder">Password</label>
+           
           </div>
         </div>
 
         <div class="cont2">
 
           <div class="input-container ic1">
-            <input type="text" class="input" id="lastname" required name="last_name" placeholder="  " />
+            <input type="text" class="input" id="lastname" required name="last_name" placeholder=" LASTNAME " />
             <div class="cut cut1"></div>
-            <label for="lastname" class="placeholder">lastname</label>
+           
           </div>
           <div class="input-container ic1">
-            <input type="email" class="input" id="email" required name="email" placeholder="  " />
+            <input type="email" class="input" id="email" required name="email" placeholder=" EMAIL " />
             <div class="cut cut2"></div>
-            <label for="firstname" class="placeholder">email</label>
+            
           </div>
-          <div class="input-container ic2">
-            <input type="password" class="input" id="myinput1" required name="password2" placeholder="  " />
+          <div class="input-container ic1">
+            <input type="password" class="input" id="myinput1" required name="password2"
+              placeholder=" CONFIRM PASSWORD " />
             <div class="cut cut3"></div>
-            <label for="myinput1" class="placeholder">confirm Password</label>
+          
           </div>
         </div>
 
       </div>
 
-      <div style="display: flex; justify-content:center; align-items: center; position: relative; top: 20;">
+      <div style="display: flex; justify-content:center; align-items: center; position: relative; top: 42px; left: -7px;">
         <input type="checkbox" onclick="myfunction(), myfunction1()" style="margin-right: 15px">show password
       </div>
 
@@ -374,8 +284,9 @@
       <button type="submit" class="submit">Sign up</button>
       <br>
       <br>
-      <div style="display: flex; justify-content:left; align-items: left; margin-left: 40px; position: relative; top: 30; left: -25; ">
-        <a style="text-decoration: none;" href="/login">already have an account? sign in here</a>
+      <div
+        style="display: flex; justify-content:center; align-items: center; margin-left: 40px; position: relative; top: 016px; left: -25; ">
+        <a style="text-decoration: none; color: #fff;" href="/login">Already have an account?</a>
       </div>
 
   </div>

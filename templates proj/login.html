@@ -9,44 +9,51 @@
 
   <style>
     body {
-      background-image: url(https://i.pinimg.com/originals/bd/d6/62/bdd662ca976a04e80f6155e55fdf43d2.jpg);
+      background-image: url('/Images/bgg.png');
       background-size: 100% 100%;
       align-items: center;
       background-color: #f5f2f5;
       display: flex;
       justify-content: center;
-      /* height: 100vh; */
       background-repeat: no-repeat;
       backdrop-filter: blur(15px);
     }
 
-    .form {
+    .main {
       background-color: #979797;
       color: white;
-      background: rgb(0, 0, 0, 0.15);
+      background: rgb(177 183 184 / 15%);
       /* border-radius: 20px; */
       box-sizing: border-box;
       height: 450px;
-      /* width: 520px; */
+      width: 600px;
       padding: 20px;
       /* box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14); */
       /* opacity: .1; */
-      
+
     }
-    .body_1{
+
+    .body_1 {
       display: flex;
-      border: 1px solid white;
-      width: 520px;
-    }
-    .cart_pic{
-      /* background-color: white; */
-      background: rgb(0, 0, 0, 0.15);
-      height: 450px;
+      border: 0.5px solid white;
+      /* width: 520px; */
+      box-shadow: 0px 11px 35px 2px rgb(116 182 197 / 50%);
+      position: relative;
+      left: 100px;
       
+    }
+
+    .cart_pic {
+
+      background: #ffffff;
+      height: 450px;
+      width: 300px;
       display: flex;
       justify-content: center;
+      opacity: 0.5;
       align-items: center;
     }
+
 
     .title {
       color: #eee;
@@ -78,25 +85,31 @@
       margin-top: 30px;
     }
 
+    .input::placeholder {
+      color: white;
+      font-size: small;
+    }
+
     .input {
       background-color: #273c51;
       background: rgb(0, 0, 0, 0.1);
-      border-radius: 12px;
+      /* border-radius: 12px; */
       border: .4px solid white;
       box-sizing: border-box;
-      color: #000000;
+      color: #ffffff;
       font-size: 18px;
-      height: 100%;
+      height: 39px;
       outline: 0;
       padding: 4px 20px 0;
-      width: 100%;
+      width: 390px;
+      position: relative;
+      left: 55px;
     }
 
     .btn {
       cursor: pointer;
-      border-radius: 5em;
-      color: #fff;
-      background: linear-gradient(to right, #b171bf, #5b39e2);
+      color: #6994CD;
+      background-color: #ffffff;
       border: 0;
       padding-left: 40px;
       padding-right: 40px;
@@ -107,59 +120,27 @@
       font-size: 15px;
       box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
       outline: none;
-      width: 280px;
-      height: 50px;
+      width: 130px;
+      height: 35px;
       position: relative;
-      right: 95;
-      top: 40px;
+      right: 3px;
+      top: 25px;
     }
 
-    /* .cut {
-      background-color: #273c51;
-      background: rgb(0, 0, 0, 0.1);
-      border-radius: 10px;
-      height: 20px;
-      left: 20px;
-      position: absolute;
+    .shift_img {
+      position: relative;
+      left: -181px;
+    }
+
+   
+    .sign {
+      font-size: 40px;
+      font-weight: 700;
+      position: relative;
       top: -20px;
-      transform: translateY(0);
-      transition: transform 200ms;
-      width: 76px;
-    }
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
-    .cut-short {
-      width: 70px;
     }
-
-    .input:focus~.cut,
-    .input:not(:placeholder-shown)~.cut {
-      transform: translateY(8px);
-    }
-
-    .placeholder {
-      color: #65657b;
-      font-family: sans-serif;
-      left: 20px;
-      line-height: 14px;
-      pointer-events: none;
-      position: absolute;
-      transform-origin: 0 50%;
-      transition: transform 200ms, color 200ms;
-      top: 20px;
-    }
-
-    .input:focus~.placeholder,
-    .input:not(:placeholder-shown)~.placeholder {
-      transform: translateY(-30px) translateX(10px) scale(0.75);
-    }
-
-    .input:not(:placeholder-shown)~.placeholder {
-      color: #808097;
-    }
-
-    .input:focus~.placeholder {
-      color: #dc2f55;
-    } */
 
     .submit {
       background-color: #08d;
@@ -226,23 +207,23 @@
     <div class="main">
       <form class="form" method="post" action="login">
         {% csrf_token %}
-        <p class="sign" align="center">Sign in</p>
+        <p class="sign" align="center">LOGIN</p>
 
 
 
         <div class="input-container ic1">
-          <input type="text" class="input" id="firstname" required name="username" placeholder=" Username " />
+          <input type="text" class="input" id="firstname" required name="username" placeholder=" USERNAME " />
           <div class="cut"></div>
           <!-- <label for="firstname" class="placeholder">Username</label> -->
         </div>
 
         <div class="input-container ic2">
-          <input type="password" class="input" id="myinput" required name="password" placeholder=" password " />
+          <input type="password" class="input" id="myinput" required name="password" placeholder=" PASSWORD " />
           <div class="cut cut-short"></div>
           <!-- <label for="myinput" class="placeholder">Password</label> -->
         </div>
 
-        <div style="display: flex; justify-content:center; align-items: center;top: 18px;
+        <div style="display: flex; justify-content:center; align-items: center;top: 18px; left: -27px;
     position: relative; ">
           <input type="checkbox" onclick="myfunction()" style="margin-right: 15px">show password
         </div>
@@ -263,16 +244,17 @@
         <br>
         <br>
         <div style="display: flex; justify-content: center; align-items: center ">
-          <a style="text-decoration: none; position: relative; top: 85px;" href="/register">Don't have account?? Sign up
-            here!!</a>
+          <a style="text-decoration: none;font-family:'Times New Roman', Times, serif, 'Trebuchet MS', sans-serif; position: relative; top: 25px;left: -23px; color: 
+          #FFFFFF;" href="/register">Don't have an account?</a>
         </div>
     </div>
     <div class="cart_pic">
-      <img src="https://i.pinimg.com/originals/7a/3f/76/7a3f76a27f01073cfc3edd8393de990f.jpg" style="background:#a6eff9 ; height: 200px; width: 200px;" alt="">
     </div>
-
   </div>
-
+  <div class="shift_img">
+    <img src="/images/cart.png"
+      style="background:none ; height: 200px; width: 250px;" alt="">
+  </div>
 
   {% for message in messages %}
   <script>
