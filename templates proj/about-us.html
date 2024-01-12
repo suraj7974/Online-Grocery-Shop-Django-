@@ -1,176 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>About us</title>
 
-<head>
-  <meta charset="UTF-8">
-  <title>About us</title>
-
-  <style>
-    body {
-      background-color: #F3EBF6;
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-    }
-
-    html {
-      box-sizing: border-box;
-    }
-
-    *,
-    *:before,
-    *:after {
-      box-sizing: inherit;
-    }
-    .about_us{
-      height: 600px;
-    }
-
-    .column {
-      float: left;
-      width: 33.3%;
-      margin-bottom: 16px;
-      padding: 0 8px;
-    }
-
-    .card {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 20px;
-      box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
-      margin: 8px;
-      background-color: white;
-    }
-
-    img {
-      border-radius: 20px;
-      width: 18 px;
-      height: 27rem;
-    }
-
-    .about-section {
-
-      padding: 50px;
-      text-align: center;
-      background-color: #474e5d;
-      color: white;
-    }
-
-    .container {
-      padding: 0 16px;
-    }
-
-    .container::after,
-    .row::after {
-      content: "";
-      clear: both;
-      display: table;
-    }
-
-    .title {
-      color: grey;
-    }
-
-    .button {
-      background: linear-gradient(to right, #9C27B0, #E040FB);
-      border-radius: 20px;
-      outline: none;
-      border: none;
-      display: inline-block;
-      padding: 8px;
-      color: white;
-      text-align: center;
-      cursor: pointer;
-      width: 40%;
-      margin-left: 30%;
-    }
-
-    .button:hover {
-      background-color: #555;
-    }
-
-    .link {
-      text-decoration: none;
-      color: white;
-    }
-
-    .link:hover {
-      color: #E040FB;
-    }
-
-    @media screen and (max-width: 650px) {
-      .column {
-        width: 100%;
-        display: block;
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        background-image: url("/images/images/aboutusbg.png");
+        backdrop-filter: blur(10px);
       }
-    }
-  </style>
 
-</head>
+      html {
+        box-sizing: border-box;
+      }
 
-<body>
-  <div class="about-section">
-    <h1>“DON’T GO TO MART, BE SMART” </h1>
-    <h2>SHOP SMART WITH US </h2>
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
 
-    <p>
-      Greetings to all the Customers out there!!!!!
+      .about_us {
+        height: 600px;
+      }
 
-    </p>
-    <a href="/" style="color: red;" class="link">Go to homepage</a>
-  </div>
-  <div class="about_us">
-    <h2>About US</h2>
-  </div>
+      .column {
+        float: left;
+        width: 33.3%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+      }
 
+      .card {
+        display: flex;
+        width: 700px;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid white;
+        box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+        margin: 8px;
+      }
+      .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: -110px;
+      }
+      
 
-  <div class="row">
-    <div class="column">
-      <div class="card">
-        <image src="https://i.pinimg.com/736x/ae/7d/45/ae7d45e6e61dbe2b5d9124e1dc490584.jpg" alt="suraj"
-          style="display: flex; justify-content: center; align-items: center;"></image>
-        <div class="container">
-          <h2>Suraj Patel</h2>
-          <!-- <p class="title">Front-end Developer</p> -->
-          <p class="title">Full Stack</p>
-          <p>BIT Durg</p>
-          <p>surajpatelsuraj55@gmail.com</p>
+      img {
+        border-radius: 20px;
+        width: 18 px;
+        height: 27rem;
+      }
 
-          </a>
+      .name {
+        font-size: 50px;
+        color: white;
+        display: flex;
+        justify-content: center;
+      }
 
-        </div>
+      .about-section {
+        padding: 50px;
+        text-align: center;
+        background-color: #474e5d;
+        color: white;
+      }
+
+      .container {
+        padding: 0 16px;
+        display: flex;
+      }
+      
+
+      .container::after,
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      .title {
+        color: grey;
+      }
+
+      .button {
+        background: linear-gradient(to right, #9c27b0, #e040fb);
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        text-align: center;
+        cursor: pointer;
+        width: 40%;
+        margin-left: 30%;
+      }
+
+      .button:hover {
+        background-color: #555;
+      }
+
+      .link {
+        text-decoration: none;
+        color: white;
+      }
+
+      .link:hover {
+        color: #e040fb;
+      }
+
+      @media screen and (max-width: 650px) {
+        .column {
+          width: 100%;
+          display: block;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="about-section">
+      <h1>“DON’T GO TO MART, BE SMART”</h1>
+      <h2>SHOP SMART WITH US</h2>
+
+      <p>Greetings to all the Customers out there!!!!!</p>
+      <a href="/" style="color: red" class="link">Go to homepage</a>
+    </div>
+    <div class="top">
+      <div class="about_us">
+        <h1>About US</h1>
+       
+      </div>
+      <div class="cartimg">
+        <img src="" alt="" />
       </div>
     </div>
 
-    <div class="column">
-      <div class="card">
-        <image src="https://i.pinimg.com/736x/53/4f/4e/534f4edd089fc67f2d0a216ca81cf2b7.jpg" alt="Rahul" ></image>
-        <div class="container">
-          <h2>Rahul Singh</h2>
-          <p class="title">Front-end Developer</p>
-          <p>BIT Durg</p>
-          <p>rn03singh@gmail.com</p>
+    <div class="bottom">
+      <p class="name">MEET OUR MEMBERS</p>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <div class="container">
+              <div class="details">
+                <h2>Suraj Patel</h2>
+                <br />
 
+                <p class="title">Full Stack Developer</p>
+                <p>BIT Durg</p>
+                <p>surajpatelsuraj55@gmail.com</p>
+              </div>
+              <div class="profile_img">
+                <img
+                  src="/images/images/suraj.png"
+                  alt="suraj"
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                />
+              </div>
+            </div>
+          </div>
+        </div>
 
-          </a>
+        <div class="column">
+          <div class="card">
+            <div class="container">
+              <div class="details">
+                <h2>Suraj Patel</h2>
+
+                <p class="title">Full Stack Developer</p>
+                <p>BIT Durg</p>
+                <p>surajpatelsuraj55@gmail.com</p>
+              </div>
+              <div class="profile_img">
+                <img
+                  src="/images/images/suraj.png"
+                  alt="suraj"
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <div class="container">
+              <div class="details">
+                <h2>Suraj Patel</h2>
+
+                <p class="title">Full Stack Developer</p>
+                <p>BIT Durg</p>
+                <p>surajpatelsuraj55@gmail.com</p>
+              </div>
+              <div class="profile_img">
+                <img
+                  src="/images/images/suraj.png"
+                  alt="suraj"
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="column">
-      <div class="card">
-        <image src="https://i.pinimg.com/736x/ae/d9/b3/aed9b3049f95f292a937b6d2f693d6c5.jpg" alt="Shreyansh" ></image>
-        <div class="container">
-          <h2>Shreyansh pathak</h2>
-          <p class="title">Front-end Developer</p>
-          <p>BIT Durg</p>
-          <p style="font-size: 14px;">pathakshreyansh9@gmail.com</p>
-         
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
-
+  </body>
 </html>
