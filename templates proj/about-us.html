@@ -8,8 +8,9 @@
       body {
         font-family: Arial, Helvetica, sans-serif;
         margin: 0;
-        background-image: url("/images/images/aboutusbg.png");
-        backdrop-filter: blur(10px);
+        /* background-image: url("/images/images/aboutusbg.png"); */
+        background: rgb(173, 199, 236);
+        backdrop-filter: blur(15px);
       }
 
       html {
@@ -21,9 +22,57 @@
       *:after {
         box-sizing: inherit;
       }
+      .profile_img{
+        border: 1px solid white;
+        background: rgba(0, 0, 0, 0.14);
+        position: relative;
+        width: 300px;
+        height: 436px;
+        left: 94px;
+      }
+      .profile_img1{
+        border: 1px solid white;
+        background: rgba(0, 0, 0, 0.14);
+        position: relative;
+        width: 300px;
+        height: 436px;
+        left: 124px;
+      }
+      .profile_img2{
+        border: 1px solid white;
+        background: rgba(0, 0, 0, 0.14);
+        position: relative;
+        width: 300px;
+        height: 436px;
+        left: 89px;
+      }
+      .details{
+        color: #ffffff;
+        position: relative;
+        top: 35px;
+      }
+      .cartlogo{
+        position: relative;
+        left: 269px;
+        top: -400px;
+      }
+     
 
-      .about_us {
+      .about_us1 {
+        position: relative;
+        left: 182px;
+        margin-top: 70px;
         height: 600px;
+        width: 1000px;
+      }
+      .top{
+        border: 2px solid white;
+        width: 1300px;
+        height: 900px;
+        position: relative;
+        left: 100px;
+        box-shadow:  0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+        border-radius: 3px;
       }
 
       .column {
@@ -31,6 +80,45 @@
         width: 33.3%;
         margin-bottom: 16px;
         padding: 0 8px;
+      }
+      .btn{
+        padding: 5px;
+        color: #c2d5f0;
+        background-color: white;
+        border: 1px solid white;
+        position: relative;
+        top: 112px;
+        left: 70px;
+        width: 75px;
+        cursor: pointer;
+
+      }
+      .btn1{
+        padding: 5px;
+        color: #c2d5f0;
+        background-color: white;
+        border: 1px solid white;
+        position: relative;
+        top: 146px;
+        left: 38px;
+        width: 75px;
+        cursor: pointer;
+
+      }
+      .btn2{
+        padding: 5px;
+        color: #c2d5f0;
+        background-color: white;
+        border: 1px solid white;
+        position: relative;
+        top: 144px;
+        left: 74px;
+        width: 75px;
+        cursor: pointer;
+
+      }
+      .about_us{
+        font-size: 20px;
       }
 
       .card {
@@ -68,7 +156,6 @@
       .about-section {
         padding: 50px;
         text-align: center;
-        background-color: #474e5d;
         color: white;
       }
 
@@ -86,7 +173,7 @@
       }
 
       .title {
-        color: grey;
+        color: rgb(255, 255, 255);
       }
 
       .button {
@@ -109,11 +196,18 @@
 
       .link {
         text-decoration: none;
-        color: white;
+        display: block;
+        position: relative;
+        left: 627px;
+        color: #c2d5f0;
+        width: 144px;
+        height: 21px;
+        background-color: #ffffff;
+        
       }
 
       .link:hover {
-        color: #e040fb;
+        color: #c2d5f0;
       }
 
       @media screen and (max-width: 650px) {
@@ -131,15 +225,15 @@
       <h2>SHOP SMART WITH US</h2>
 
       <p>Greetings to all the Customers out there!!!!!</p>
-      <a href="/" style="color: red" class="link">Go to homepage</a>
+      <a href="/" class="link">Go to homepage</a>
     </div>
     <div class="top">
       <div class="about_us">
-        <h1>About US</h1>
-       
+        <h1 style="color: rgb(0, 0, 0); text-align: center;">About US</h1>
+        <p class="about_us1" style="color: rgb(0, 0, 0);"">At Our store we are passionate about delivering more than just groceries; we are committed to bringing convenience, quality, and care to your doorstep. Our journey began with a simple idea – to make grocery shopping an effortless and enjoyable experience for everyone.</p>
       </div>
-      <div class="cartimg">
-        <img src="" alt="" />
+      <div>
+        <img class="cartlogo" src="/images/images/about_cartlogo.png" alt="">
       </div>
     </div>
 
@@ -156,16 +250,13 @@
                 <p class="title">Full Stack Developer</p>
                 <p>BIT Durg</p>
                 <p>surajpatelsuraj55@gmail.com</p>
+                <button class="btn"  onclick="window.open('https://www.instagram.com/_suraj__147/', '_blank')" >contact</button>
               </div>
               <div class="profile_img">
                 <img
                   src="/images/images/suraj.png"
                   alt="suraj"
-                  style="
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                  "
+                  
                 />
               </div>
             </div>
@@ -176,21 +267,18 @@
           <div class="card">
             <div class="container">
               <div class="details">
-                <h2>Suraj Patel</h2>
+                <h2>Rahul Singh</h2>
 
-                <p class="title">Full Stack Developer</p>
+                <p class="title">Front End Developer</p>
                 <p>BIT Durg</p>
-                <p>surajpatelsuraj55@gmail.com</p>
+                <p>rn0singh@gmail.com</p>
+                <button class="btn1" onclick="window.open('https://www.instagram.com/_suraj__147/', '_blank')">contact</button>
               </div>
-              <div class="profile_img">
+              <div class="profile_img1">
                 <img
-                  src="/images/images/suraj.png"
-                  alt="suraj"
-                  style="
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                  "
+                  src="/images/images/rahul.png"
+                  alt="rahul"
+                  
                 />
               </div>
             </div>
@@ -201,21 +289,18 @@
           <div class="card">
             <div class="container">
               <div class="details">
-                <h2>Suraj Patel</h2>
+                <h2>Shreyansh Pathak</h2>
 
-                <p class="title">Full Stack Developer</p>
+                <p class="title">Front End Developer</p>
                 <p>BIT Durg</p>
-                <p>surajpatelsuraj55@gmail.com</p>
+                <p>pathakshreyansh9@gmail.com</p>
+                <button class="btn2" onclick="window.open('https://www.instagram.com/shreyansh_8321/', '_blank')">contact</button>
               </div>
-              <div class="profile_img">
+              <div class="profile_img2">
                 <img
-                  src="/images/images/suraj.png"
-                  alt="suraj"
-                  style="
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                  "
+                  src="/images/images/shreyansh.png"
+                  alt="shreyansh"
+                 
                 />
               </div>
             </div>
