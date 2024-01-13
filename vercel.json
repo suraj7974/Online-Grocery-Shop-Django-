@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "grocerystore/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "grocerystore/wsgi.py"
+      }
+    ]
+  }
