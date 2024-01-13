@@ -25,8 +25,7 @@ SECRET_KEY = '30*vuvbtzw$hu@z-c2zj19)*2b57r76y5ahkp6w8d2cy86)q&o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
 
 # Application definition
 
@@ -72,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'grocerystore.wsgi.application'
+WSGI_APPLICATION = 'grocerystore.wsgi.app'
 
 
 # Database
