@@ -21,13 +21,17 @@
     />
 
     <style>
+        html{
+            scroll-behavior: smooth;
+        }
       body {
         margin: 0;
         padding: 0;
         font-family: "Ubuntu", sans-serif;
         background-image: url("/images/images/homebg2.png");
         background-repeat: no-repeat;
-        
+        height: 5000px;
+       
       }
 
       header {
@@ -35,26 +39,75 @@
         height: 100vh;
         position: relative;
       }
-      #nichee{
+      #nichee {
         position: relative;
         top: 60px;
       }
       .sections {
         position: relative;
-        top: 90px;
+        top: 80px;
         background: linear-gradient(to right, #7ba4df, #bcd7fd);
         display: flex;
         flex-direction: column;
-
+        width: 2200px;
+        height: 1640px;
       }
-      .sections-box{
-        border: 4px solid white;
+      .sections-box {
+        border: 3px solid white;
         width: 1300px;
-        height: 850px;
+        height: 750px;
         position: relative;
         left: 100px;
-        box-shadow:  0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+        box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
         border-radius: 3px;
+      }
+      .sections_1 {
+        width: 500px;
+        height: 400px;
+        opacity: 0.9;
+      }
+      .para1 {
+        position: relative;
+        top: -40px;
+      }
+      .para2 {
+        position: relative;
+        top: -70px;
+      }
+      .para3 {
+        color: white;
+      }
+      .imgg {
+        position: relative;
+        top: 120px;
+        left: 82px;
+      }
+      .pics {
+        position: relative;
+        left: 60px;
+      }
+      .p1 {
+        position: relative;
+        top: -435px;
+        left: 350px;
+        /* border: 2px solid black;        */
+        padding: 1px;
+      }
+      .p2 {
+        position: relative;
+        width: 167px;
+        padding: 1px;
+        top: -687px;
+        left: 605px;
+        /* border: 2px solid black; */
+      }
+      .p3 {
+        position: relative;
+        padding: 1px;
+        width: 167px;
+        top: -944px;
+        left: 816px;
+        /* border: 2px solid black; */
       }
 
       .nav-area {
@@ -62,11 +115,12 @@
         position: fixed;
         width: 100%;
         z-index: 100;
+        position: sticky;
       }
       .cont1 {
         color: rgb(255, 255, 255);
         height: 50px;
-        width: 260px;
+        width: 400px;
         position: relative;
         top: -425px;
         left: 170px;
@@ -77,12 +131,37 @@
         border-radius: 9px;
         cursor: pointer;
         border: 1px solid #0f59cb;
-        padding: 6px;
+        padding: 7px;
+        position: relative;
+        top: -70px;
       }
-      .img1{
-        width: 300px;
-        
+      .btn2 {
+        color: white;
+        background-color: #0f59cb;
+        border-radius: 9px;
+        cursor: pointer;
+        border: 1px solid #0f59cb;
+        padding: 7px;
+        position: relative;
+        left: 935px;
+        top: -240px;
       }
+      .btn3 {
+        color: white;
+        background-color: #0f59cb;
+        border-radius: 9px;
+        cursor: pointer;
+        border: 1px solid #0f59cb;
+        padding: 7px;
+        position: relative;
+        top: -170px;
+        left: -110px;
+      }
+      /* .pics{
+        display: flex;
+        justify-content: space-evenly;
+      } */
+
       .content {
         background-color: #adc7ec;
         width: 600px;
@@ -143,7 +222,6 @@
         text-transform: uppercase;
         border: 3px solid #322934;
         padding: 10px 25px;
-
         border-radius: 25px;
         text-shadow: 1px 1px 1px #000;
       }
@@ -200,23 +278,149 @@
       </div>
     </header>
     <div class="cont1">
-      <h3>We Provide</h3>
-      <h2>Fresh Grocery</h2>
-      <p>
+      <p style="font-size: 35px">We Provide</p>
+      <p class="para1" style="font-size: 50px">Fresh Grocery</p>
+      <p class="para2">
         Keep it easy with these simple but delicious recipes from make-ahead
         lunches and midweek meals to fuss-free sides.
       </p>
-      <button class="btn1">Get Started</button>
+     <a href="#section1"><button class="btn1">Get Started</button></a> 
     </div>
 
     <section class="sections">
-        <div class="sections-box">
-            <p>SSR SHOP</p>
-            <img id="img1" src="/images/images/cart.png" alt="">
-        </div>
-        <div class="sections-box" id="nichee"></div>
+      <div class="sections-box">
+        <p style="text-align: center; color: white; font-size: 40px">
+          SSR SHOP
+        </p>
+        <img
+          class="imgg"
+          style="background: none"
+          width="350px"
+          height="300px"
+          src="/images/images/cart.png"
+          alt=""
+        />
+
+        <p
+          style="
+            color: #5a6e8b;
+            font-size: 18px;
+            width: 500px;
+            position: relative;
+            top: -270px;
+            left: 750px;
+          "
+        >
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur sed
+          atque placeat, minus tempora quisquam quis blanditiis earum eum
+          doloremque quam voluptatibus incidunt odit consectetur modi reiciendis
+          autem a at saepe deserunt. Quidem esse officia tempore velit minima
+          nihil nesciunt quo blanditiis est. Beatae exercitationem ea quo earum.
+          Quae ipsum excepturi dolor itaque expedita accusamus labore quos?
+          Suscipit molestias quisquam eius sequi eos. Non, voluptate. Iste
+          perspiciatis fugit, rerum quis modi ullam soluta tempore. Architecto
+          provident aliquid maxime natus ipsa quis corrupti. Vero quae quos,
+          cumque facilis quidem laborum expedita dignissimos dicta deleniti iure
+          recusandae a ducimus placeat, saepe, quibusdam aperiam. Id harum
+          cumque consectetur tempora aliquid quia officiis illo repellendus
+          laborum libero. Natus omnis nemo repudiandae corrupti quibusdam rem
+          similique et nihil laudantium, neque, explicabo, totam repellat vel
+          nesciunt odit officiis. Soluta fugit, similique cupiditate quam sed
+          quaerat porro earum, id tempore facere ea obcaecati distinctio
+          accusamus, reprehenderit temporibus!
+        </p>
+        <button class="btn2">Learn More</button>
+      </div>
+
+      <div class="sections-box" id="nichee">
+        <p style="font-size: 40px; color: white; text-align: center">
+          Features
+        </p>
+
+        <p
+          style="
+            color: #5a6e8b;
+            font-size: 18px;
+            width: 500px;
+            position: relative;
+            top: 74px;
+            left: 75px;
+          "
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
+          eligendi. Accusantium cumque nulla adipisci? Inventore iure ut
+          officiis dolorum harum, maxime nobis dignissimos? Sunt officia minima
+          consequatur corrupti non nulla possimus, ipsum libero esse nobis
+          deserunt eveniet! Commodi molestiae eaque ut repellendus quo alias
+          ducimus, illo soluta, ipsa quas explicabo possimus odit laudantium, at
+          quam architecto? Tenetur cupiditate omnis quas possimus iusto aut,
+          laudantium dolores corporis quae modi sit doloremque ad, architecto
+          reprehenderit eos labore voluptatem rerum rem quam voluptatum!
+          Eveniet, similique quos? Iure modi ut minus nulla cumque autem
+          architecto ipsa, magnam minima numquam inventore facilis facere neque
+          voluptate ad recusandae quam quaerat. Accusantium quibusdam
+          repudiandae facere magni, hic esse quidem at odit. Quo amet eius modi.
+          Facilis consequatur voluptatibus, ducimus fugiat sunt, earum, quam
+          consectetur consequuntur perferendis neque error quod. Earum quis
+          nobis delectus, amet dolores perspiciatis deleniti. Quam, obcaecati
+          quos distinctio soluta et vel incidunt excepturi voluptatem.
+        </p>
+        <img
+          style="background: none; position: relative; top: -310px; left: 820px"
+          width="350px"
+          height="300px"
+          src="/images/images/about_cartlogo.png"
+          alt=""
+        />
+        <button class="btn3">Learn More</button>
+      </div>
     </section>
 
-    
+    <div id="section1"
+      style="
+        position: relative;
+        top: 20px;
+        height: 680px;
+        background-image: url(/images/images/secbg1.jpg);
+        background-repeat: no-repeat;
+      "
+    >
+      <div
+        style="
+          background: linear-gradient(to right, #6998de, #83a5d0);
+          height: 680px;
+          opacity: 0.8;
+        "
+      >
+        <div>
+          <p
+            style="
+              color: white;
+              font-size: 60px;
+              position: relative;
+              top: 100px;
+              left: 40px;
+            "
+          >
+            What are you looking for?
+          </p>
+        </div>
+      </div>
+      <div class="pics">
+        <a href="/products">
+            <div class="p1" style="width: 200px; height: 250px">
+                <img src="/images/images/fruits1.jpg" alt="" />
+              </div>
+        </a>
+        <a href="/products">
+            <div class="p2"><img src="/images/images/vege3.jpg"" alt=""></div>
+        </a>
+        <a href="/products">
+            <div class="p3"><img src="/images/images/grains2.jpg"" alt=""></div>
+        </a>
+        
+        
+      </div>
+    </div>
   </body>
 </html>
