@@ -230,12 +230,7 @@
                 <!-- Setting the links to #! will ensure that no action takes place on click. -->
                 {% if user.is_authenticated %}
                 <li><a href="/" style="position:fixed; right:540px;">Home</a></li>
-                {% comment %} <li><a href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                    </svg>
-                    Hi, {{user.username}}</a></li> {% endcomment %}
+               
                 <li><a href="cart" style="position:fixed; right:415px;">My Cart
                     <span class="badge bg-light text-dark">
                         {{request.session.cart.keys|length}}</span>
@@ -324,11 +319,6 @@
     {% endfor %}
 
 </div>
-
-
-{% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.4.1/vanilla-tilt.min.js">
-</script> {% endcomment %}
-
 
 {% endblock %}
 </body>
